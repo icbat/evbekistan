@@ -1,2 +1,4 @@
 client/mods/
 server/mods/
+client/bin/
+server/bin/
