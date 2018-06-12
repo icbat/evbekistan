@@ -12,5 +12,25 @@ cd client
 rm -rf mods
 rm -rf bin
 cd ..
-robocopy "bin/forge-1.12.2-14.23.4.2707-universal.jar" client/bin/modpack.jar
 @echo " -- Finished Building Client"
+
+
+
+@echo " -- Starting Building Server"
+@echo "Deleting old archive"
+rm server/server.zip
+@echo "Copying mods into server"
+robocopy mods server/mods
+@echo "Copying forge into server"
+robocopy "bin/" server/bin
+@echo "Copying config into server"
+robocopy "config/" server/config
+cd server
+@echo "Zipping it"
+7z a -tzip server.zip bin mods config
+@echo "Cleaning up server"
+rm -rf mods
+rm -rf bin
+rm -rf config
+cd ..
+@echo " -- Finished Building Server"
