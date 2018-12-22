@@ -2,3 +2,5 @@ client/mods/
 server/mods/
 client/bin/
 server/bin/
+server/config/
+backup*/
