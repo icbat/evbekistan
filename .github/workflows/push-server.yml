@@ -6,7 +6,6 @@ on:
     branches: [ main ]
   push:
     # Enables automatic deploys off pushes/merges into the main branch
-    branches: [ main ]
     tags:
       - 'v*'
 
