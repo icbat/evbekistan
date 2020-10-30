@@ -15,6 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: mkdir server/
+    - run: cp -r mods/ bin/ config/ server/
+    - run: zip -9 -r server.zip server/
+    - run: ls -lsa
 
     # - name: Put everything into a folder
     #   run: cp -r ${{ env.ADDON_BUNDLE_FILES }} ${{ env.ADDON_NAME }}.toc ${{env.ADDON_NAME}}/
