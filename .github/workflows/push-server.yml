@@ -4,9 +4,11 @@ on:
   workflow_dispatch:
     # Enables a button to manually run this against the main branch
     branches: [ main ]
-  # push:
-  #   # Enables automatic deploys off pushes/merges into the main branch
-  #   branches: [ main ]
+  push:
+    # Enables automatic deploys off pushes/merges into the main branch
+    branches: [ main ]
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -23,11 +25,3 @@ jobs:
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: Evbekistan/.minecraft/
-      
-      
-
-    # - name: Put everything into a folder
-    #   run: cp -r ${{ env.ADDON_BUNDLE_FILES }} ${{ env.ADDON_NAME }}.toc ${{env.ADDON_NAME}}/
-  
-    # - name: Zip it good
-    #   run: zip -9 -r ${{env.ADDON_NAME}}.zip  ${{env.ADDON_NAME}}/

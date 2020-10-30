@@ -1,0 +1,42 @@
+name: Release a Client.zip for folks to download
+
+on:
+  workflow_dispatch:
+    # Enables a button to manually run this against the main branch
+    branches: [ main ]
+  push:
+    # Enables automatic deploys off pushes/merges into the main branch
+    branches: [ main ]
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: ls -lsa
+    - run: zip -9 -r evbek_${{ github.ref }}.zip  Evbekistan/
+
+    - name: Create GH Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+        
+    - name: Upload GH Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./evbek_${{ github.ref }}.zip
+        asset_name: Evbeikistan-${{ github.ref }}.zip
+        asset_content_type: application/zip
