@@ -13,11 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the code
-      uses: actions/checkout@v2
-
-    # - name: Create 'dist' folder
-    #   run: mkdir ${{env.ADDON_NAME}}/
+    - uses: actions/checkout@v2
+    - run: mkdir server/
 
     # - name: Put everything into a folder
     #   run: cp -r ${{ env.ADDON_BUNDLE_FILES }} ${{ env.ADDON_NAME }}.toc ${{env.ADDON_NAME}}/
