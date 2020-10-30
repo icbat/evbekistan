@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: ls -lsa
-    - run: zip -9 -r evbek_${{ github.ref }}.zip  Evbekistan/
+    - run: zip -9 -r Evbekistan.zip  Evbekistan/
 
     - name: Create GH Release
       id: create_release
@@ -37,6 +37,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./evbek_${{ github.ref }}.zip
+        asset_path: ./Evbekistan.zip
         asset_name: Evbeikistan-${{ github.ref }}.zip
         asset_content_type: application/zip
