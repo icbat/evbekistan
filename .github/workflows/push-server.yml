@@ -1,4 +1,4 @@
-name: Push this modpack live
+name: Build and push the server up to the hosting
 
 on:
   workflow_dispatch:
