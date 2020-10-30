@@ -1,3 +1,0 @@
-forge-1.16.3-34.1.25-universal
-
-not the latest due to:  https://github.com/BluSunrize/ImmersiveEngineering/issues/4410

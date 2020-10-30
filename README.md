@@ -9,6 +9,6 @@ Pushing to this will deploy and overwrite to the live server!
 
 ### Updating Forge version
 
-1. Grab the Universal Forge Zip you want to use
-1. Copy its filename into `bin/version.txt`
-1. Replace `bin/modpack.jar` with that file
+Since Forge creates a Minecraft.jar, and we can't rightly store that in GitHub, this part will need to be done manually.
+
+Follow the steps here:  https://apexminecrafthosting.com/how-to-setup-minecraft-forge/
