@@ -5,6 +5,11 @@ A Minecraft modpack.
 
 Pushing to this will deploy and overwrite to the live server!
 
+## Installing Client
+
+1. Use MultiMC
+1. Give MultiMC this address to import as zip:  https://github.com/icbat/evbekistan/releases/latest/download/Evbekistan.zip
+
 ## Contributing
 
 ### Updating Forge version
