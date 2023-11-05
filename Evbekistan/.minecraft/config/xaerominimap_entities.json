@@ -1,7 +1,7 @@
 {
   "hardInclude": "anything",
   "includeList": [],
-  "includeListInSuperCategory": false,
+  "includeListInSuperCategory": true,
   "excludeMode": "ONLY",
   "excludeList": [
     "minecraft:glow_item_frame",
@@ -11,6 +11,7 @@
   "protection": true,
   "settingOverrides": {
     "displayed": true,
+    "displayHeight": 0.0,
     "heightBasedFade": true,
     "renderOrder": 0.0,
     "color": 13.0,
@@ -19,18 +20,17 @@
     "alwaysDisplayNametags": false,
     "dotSize": 2.0,
     "startFadingAt": 0.0,
-    "displayY": false,
     "renderOverMinimapFrame": 1.0,
     "icons": 1.0,
-    "names": 0.0,
     "heightLimit": 20.0,
+    "names": 0.0,
     "iconScale": 1.0
   },
   "subCategories": [
     {
       "hardInclude": "living",
       "includeList": [],
-      "includeListInSuperCategory": false,
+      "includeListInSuperCategory": true,
       "excludeMode": "ONLY",
       "excludeList": [
         "minecraft:armor_stand"
@@ -45,7 +45,7 @@
         {
           "hardInclude": "players",
           "includeList": [],
-          "includeListInSuperCategory": false,
+          "includeListInSuperCategory": true,
           "excludeMode": "ONLY",
           "excludeList": [],
           "name": "gui.xaero_entity_category_players",
@@ -57,9 +57,33 @@
           },
           "subCategories": [
             {
+              "hardInclude": "nothing",
+              "includeList": [],
+              "includeListInSuperCategory": true,
+              "excludeMode": "ONLY",
+              "excludeList": [],
+              "name": "gui.xaero_entity_category_friend",
+              "protection": true,
+              "settingOverrides": {},
+              "subCategories": []
+            },
+            {
+              "hardInclude": "tracked",
+              "includeList": [],
+              "includeListInSuperCategory": true,
+              "excludeMode": "ONLY",
+              "excludeList": [],
+              "name": "gui.xaero_entity_category_tracked",
+              "protection": true,
+              "settingOverrides": {
+                "icons": 2.0
+              },
+              "subCategories": []
+            },
+            {
               "hardInclude": "same-team",
               "includeList": [],
-              "includeListInSuperCategory": false,
+              "includeListInSuperCategory": true,
               "excludeMode": "ONLY",
               "excludeList": [],
               "name": "gui.xaero_entity_category_same_team",
@@ -70,7 +94,7 @@
             {
               "hardInclude": "anything",
               "includeList": [],
-              "includeListInSuperCategory": false,
+              "includeListInSuperCategory": true,
               "excludeMode": "ONLY",
               "excludeList": [],
               "name": "gui.xaero_entity_category_other_teams",
@@ -85,7 +109,7 @@
         {
           "hardInclude": "hostile",
           "includeList": [],
-          "includeListInSuperCategory": false,
+          "includeListInSuperCategory": true,
           "excludeMode": "ONLY",
           "excludeList": [],
           "name": "gui.xaero_entity_category_hostile",
@@ -97,7 +121,7 @@
             {
               "hardInclude": "tamed",
               "includeList": [],
-              "includeListInSuperCategory": false,
+              "includeListInSuperCategory": true,
               "excludeMode": "ONLY",
               "excludeList": [],
               "name": "gui.xaero_entity_category_hostile_tamed",
@@ -112,7 +136,7 @@
         {
           "hardInclude": "anything",
           "includeList": [],
-          "includeListInSuperCategory": false,
+          "includeListInSuperCategory": true,
           "excludeMode": "ONLY",
           "excludeList": [],
           "name": "gui.xaero_entity_category_friendly",
@@ -122,7 +146,7 @@
             {
               "hardInclude": "tamed",
               "includeList": [],
-              "includeListInSuperCategory": false,
+              "includeListInSuperCategory": true,
               "excludeMode": "ONLY",
               "excludeList": [],
               "name": "gui.xaero_entity_category_friendly_tamed",
@@ -139,7 +163,7 @@
     {
       "hardInclude": "items",
       "includeList": [],
-      "includeListInSuperCategory": false,
+      "includeListInSuperCategory": true,
       "excludeMode": "ONLY",
       "excludeList": [],
       "name": "gui.xaero_entity_category_items",
@@ -153,7 +177,7 @@
     {
       "hardInclude": "anything",
       "includeList": [],
-      "includeListInSuperCategory": false,
+      "includeListInSuperCategory": true,
       "excludeMode": "ONLY",
       "excludeList": [],
       "name": "gui.xaero_entity_category_other_entities",
